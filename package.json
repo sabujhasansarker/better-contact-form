@@ -1,0 +1,22 @@
+{
+  "name": "my-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./tailwind/input.css -o ./assets/css/frontend.css --watch --config ./tailwind/tailwind.config.js",
+    "build": "tailwindcss -i ./tailwind/input.css -o ./assets/css/frontend.css --minify --config ./tailwind/tailwind.config.js",
+    "admin-dev": "tailwindcss -i ./tailwind/admin.css -o ./assets/css/admin.css --watch --config ./tailwind/tailwind.config.js",
+    "admin-build": "tailwindcss -i ./tailwind/admin.css -o ./assets/css/admin.css --minify --config ./tailwind/tailwind.config.js",
+    "dev-all": "concurrently \"npm run dev\" \"npm run admin-dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.1"
+  }
+}

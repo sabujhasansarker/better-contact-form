@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bcf-container {
+  @apply isolate;
+}
+
+.bcf-form {
+  @apply space-y-4;
+}
+
+.bcf-input {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-bcf-primary focus:ring focus:ring-bcf-primary focus:ring-opacity-50;
+}
