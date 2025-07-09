@@ -31,8 +31,8 @@ class BCF_Assets {
 				],
 			],
 			'js' => [ 
-				'bfc-frontend' => [ 
-					'src' => plugin_dir_url( __FILE__ ) . 'assets/js/frontend.js',
+				'bcf-frontend' => [ 
+					'src' => BCF_PLUGIN_URL . 'assets/js/frontend.js',
 					'deps' => [ 'jquery' ],
 					'ver' => '1.0.0',
 					'in_footer' => true

@@ -9,8 +9,8 @@ class BCF_Shortcode {
 
 	public function render_shortcode() {
 		ob_start();
-		$form_data = $this;
-		include BCF_PLUGIN_PATH . 'includes/better-contact-form.php';
+		$form_data = get_option( 'bcf_form_fields', $this->get_form_fields() );
+		include BCF_PLUGIN_PATH . 'includes/form.php';
 		return ob_get_clean();
 	}
 

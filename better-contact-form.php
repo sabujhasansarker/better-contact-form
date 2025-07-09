@@ -27,17 +27,18 @@ require_once BCF_PLUGIN_PATH . 'includes/class-bcf-shortcode.php';
 require_once BCF_PLUGIN_PATH . 'includes/class-bcf-assets.php';
 require_once BCF_PLUGIN_PATH . 'includes/class-bcf-post-type.php';
 require_once BCF_PLUGIN_PATH . 'admin/class-bcf-admin.php';
+require_once BCF_PLUGIN_PATH . 'includes/class-bcf-ajax.php';
 
 class Better_contact_form {
 	public function __construct() {
 		add_action( 'init', [ $this, 'init' ] );
 	}
 	public function init() {
-		new BCF_Shortcode();
-		new BCF_Assets();
 		$bcf = new BCF_Post_Type();
 		$bcf->register_post_type();
-
+		new BCF_Shortcode();
+		new BCF_Ajax();
+		new BCF_Assets();
 		if ( is_admin() ) {
 			new BCF_Admin();
 		}
